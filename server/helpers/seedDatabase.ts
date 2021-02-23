@@ -1,4 +1,3 @@
-import { Recipe, RecipeModel } from "../entities/Recipe";
 import { User, UserModel } from "../entities/User";
 import { Blog, BlogModel } from "../entities/Blog";
 
@@ -25,29 +24,6 @@ export async function seedDataBase() {
   } as User);
 
   await Promise.all([defaultUser.save(), secondUser.save(), thirdUser.save()]);
-
-  await RecipeModel.create(([
-    {
-      title: "Recipe 1",
-      description: "Desc 1",
-      author: defaultUser._id,
-      ratings: [
-        { value: 2, user: defaultUser._id },
-        { value: 4, user: defaultUser._id },
-        { value: 5, user: defaultUser._id },
-        { value: 3, user: defaultUser._id },
-        { value: 4, user: defaultUser._id },
-      ],
-    },
-    {
-      title: "Recipe 2",
-      author: defaultUser._id,
-      ratings: [
-        { value: 2, user: defaultUser },
-        { value: 4, user: defaultUser },
-      ],
-    },
-  ] as unknown) as Recipe[]);
 
   await BlogModel.create(([
     {
