@@ -252,6 +252,7 @@ chmod u+x deploy.sh
 ./deploy.sh
 ```
 
+
 Your app is now live
 
 ### Configure DNS
@@ -261,6 +262,12 @@ dokku domains:report api
 dokku domains:remove api old_settings
 dokku domains add-global your_DNS
 ```
+
+
+#### TODO
+
+* Add CI with CircleCI
+* Automatic persisted queries for small request with Redis
 
 ## Contact
 
