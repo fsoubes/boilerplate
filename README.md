@@ -265,6 +265,13 @@ dokku domains add-global your_DNS
 
 
 
+### Proxy Ports
+
+```
+dokku proxy:ports-add api http:80:8080
+```
+
+
 ### ADD SSL
 
 ```
