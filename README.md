@@ -264,6 +264,23 @@ dokku domains add-global your_DNS
 ```
 
 
+
+### ADD SSL
+
+```
+sudo dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git
+dokku letsencrypt api
+```
+
+If you want to renew
+
+```
+sudo dokku plugin:install https://github.com/dokku/dokku-letsencrypt.git
+letsencrypt:auto-renew api
+```
+
+More [info](https://github.com/dokku/dokku-letsencrypt)
+
 #### TODO
 
 * Add CI with CircleCI
