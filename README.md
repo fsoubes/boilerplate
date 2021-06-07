@@ -239,7 +239,7 @@ sudo dokku plugin:install https://github.com/dokku/dokku-mongo.git mongo # insta
 dokku mongo:create boiler_mongo
 dokku mongo:link boiler_mongo api
 sudo dokku plugin:install https://github.com/dokku/dokku-redis.git redis # install redis
-dokku redis:create boiler_redis api
+dokku redis:create boiler_redis
 dokku redis:link boiler_redis api
 ```
 
